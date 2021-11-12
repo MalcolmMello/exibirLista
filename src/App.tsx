@@ -1,8 +1,11 @@
+import { Pessoa } from './components/Pessoa'
+
 function App() {
   let list = [
-    'malcolm',
-    'joão',
-    'baonieky'
+    {name: 'malcolm', age: 17},
+    {name: 'pedro', age: 17},
+    {name: 'bonieky', age: 17},
+    {name: 'jose', age: 17}
   ];
 
   return (
@@ -10,7 +13,7 @@ function App() {
       <h2>Lista de presença</h2>
       <ul>
         {list.map((item, index)=>(
-          <li key={index}>{item}</li>
+          <Pessoa key={index} data={item}/>
         ))}
       </ul>
     </div>
